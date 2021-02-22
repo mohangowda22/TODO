@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <style>
+        #message{
+           padding: 10px;
+            font-family:monospace;
+            color: red;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .strike {
+            background-color: #888;
+            text-decoration: line-through;
+            text-align: justify;
+            color: #fff;
+        }
+
+        body {
+            background-color:#ffffff;
+        }
+
+        .btnx {
+            float: right;
+            margin-right: 2%;
+
+        }
+    </style>
+</head>
+
+<body onload="todo.displayItems()" >
+    <div class="container-fluid text-center">
+        <div class=" text-center">
+            <h1 style=" font-family: Georgia, 'Times New Roman', Times, serif; font-weight: 900; font-size: 80px;">TODO
+                APP</h1>
+        </div>
+        <hr>
+        <div class="container text-center">
+            <form action="#" class="form-inline">
+                <div class="container-fluid text-center ">
+                    <input class="form-control" style="width: 100%;border-radius:8px;" placeholder="Enter new item here.. "
+                        id="inputTextBox" type="text">
+                </div>
+                <div class="container-fluid text-center">
+                    <p id="message"></p>
+                </div>
+                <div class="container-fluid ">
+                    <br><button id="inputBtn" class="btn btn-success" style="width:50%;border-radius:8px;" onclick="todo.addItem();"
+                        type="submit">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid" id="div_tag">
+        <table class="table">
+            <tbody id="tableNode">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
